@@ -22,8 +22,8 @@ class RestService
         $this->app = $app;
     }
 
-    public function resource($path, $controller = null)
+    public function resource($path, $controller = null, $idVariable = 'id')
     {
-        return new Resource($this->app, $path, $controller);
+        return new Resource($this->app, $path, $controller, $idVariable);
     }
 }
